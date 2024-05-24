@@ -33,6 +33,11 @@ spec:
   affinity:
     {{- toYaml . | nindent 4 }}
   {{- end }}
+  {{- with .Values.cluster.inheritedMetadata }}
+  inheritedMetadata:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+
   priorityClassName: {{ .Values.cluster.priorityClassName }}
 
   primaryUpdateMethod: {{ .Values.cluster.primaryUpdateMethod }}
