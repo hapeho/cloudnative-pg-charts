@@ -137,6 +137,17 @@
                         }
                     }
                 },
+                "secret": {
+                    "type": "object",
+                    "properties": {
+                        "create": {
+                            "type": "boolean"
+                        },
+                        "name": {
+                            "type": "string"
+                        }
+                    }
+                },
                 "wal": {
                     "type": "object",
                     "properties": {
@@ -252,6 +263,17 @@
                     "type": "array"
                 },
                 "storage": {
+                    "type": "object",
+                    "properties": {
+                        "size": {
+                            "type": "string"
+                        },
+                        "storageClass": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "walStorage": {
                     "type": "object",
                     "properties": {
                         "size": {
@@ -431,6 +453,17 @@
                             "type": "string"
                         },
                         "secretKey": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "secret": {
+                    "type": "object",
+                    "properties": {
+                        "create": {
+                            "type": "boolean"
+                        },
+                        "name": {
                             "type": "string"
                         }
                     }

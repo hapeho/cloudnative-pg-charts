@@ -75,6 +75,11 @@ recovery:
     bucket: ""
     gkeEnvironment: false
     applicationCredentials: ""
+  secret:
+    # -- Whether to create a secret for the backup credentials
+    create: true
+    # -- Name of the backup credentials secret
+    name: ""
 
 
 cluster:
@@ -95,6 +100,10 @@ cluster:
 
   storage:
     size: 8Gi
+    storageClass: ""
+    
+  walStorage:
+    size: 1Gi
     storageClass: ""
 
   # -- The UID of the postgres user inside the image, defaults to 26
@@ -247,6 +256,11 @@ backups:
     bucket: ""
     gkeEnvironment: false
     applicationCredentials: ""
+  secret:
+    # -- Whether to create a secret for the backup credentials
+    create: true
+    # -- Name of the backup credentials secret
+    name: ""
 
   wal:
     # -- WAL compression method. One of `` (for no compression), `gzip`, `bzip2` or `snappy`.
