@@ -217,6 +217,12 @@
                         "customQueries": {
                             "type": "array"
                         },
+                        "customQueriesSecret": {
+                            "type": "array"
+                        },
+                        "disableDefaultQueries": {
+                            "type": "boolean"
+                        },
                         "enabled": {
                             "type": "boolean"
                         },
@@ -225,6 +231,12 @@
                             "properties": {
                                 "enabled": {
                                     "type": "boolean"
+                                },
+                                "metricRelabelings": {
+                                    "type": "array"
+                                },
+                                "relabelings": {
+                                    "type": "array"
                                 }
                             }
                         },
@@ -349,6 +361,12 @@
                             "properties": {
                                 "enabled": {
                                     "type": "boolean"
+                                },
+                                "metricRelabelings": {
+                                    "type": "array"
+                                },
+                                "relabelings": {
+                                    "type": "array"
                                 }
                             }
                         }
