@@ -82,6 +82,10 @@ spec:
     pg_ident:
       {{- toYaml . | nindent 6 }}
     {{- end }}
+    {{- with .Values.cluster.postgresql.synchronous }}
+    synchronous:
+      {{- toYaml . | nindent 6 }}
+    {{ end }}
     {{- with .Values.cluster.postgresql.parameters }}
     parameters:
       {{- toYaml . | nindent 6 }}
